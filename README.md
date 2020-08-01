@@ -40,7 +40,7 @@ by `test_main.py` file in the `cafeteria` directory
 * `restaurant.py` holds the implementation of Restaurant class.
 * `cafe.py` holds the implementation of Cafeteria class.
 * `Cafeteria` holds [has_a](https://en.wikipedia.org/wiki/Has-a) relationship with `Restaurant` class. 
-Thus a `Composite` relationship logic has been while designing them. 
+Thus a `Composite` relationship logic has used been while designing them. 
 
 ### Installing
 Once u have cloned/uncompressed project in your directory say cafeteria, change to the project directory
