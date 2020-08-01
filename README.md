@@ -41,6 +41,7 @@ by `test_main.py` file in the `cafeteria` directory
 * `cafe.py` holds the implementation of Cafeteria class.
 * `Cafeteria` holds [has_a](https://en.wikipedia.org/wiki/Has-a) relationship with `Restaurant` class. 
 Thus a `Composite` relationship logic has been used while designing them. 
+* `test_main.py` runs the unit tests written in the `tests` directory.
 
 ### Installing
 Once u have cloned/uncompressed project in your directory say cafeteria, change to the project directory
