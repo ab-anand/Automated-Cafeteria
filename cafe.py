@@ -40,32 +40,38 @@ class Cafeteria:
         returns: tuple of least_order_cost(int), restaurant name(string)
         """
 
-        if len(orders) == 0:
-            print("No items found. Please place some items in your order.")
-            return -1, None
+        try:
+            if type(orders) == str:
+                orders = list(map(str, orders.split()))
 
-        orders = [order.lower() for order in orders]
-        least_order_cost = sys.maxsize
-        cheapest_restaurant = None
+            if len(orders) == 0:
+                print("No items found. Please place some items in your order.")
+                return -1, None
 
-        for restaurant_name, restaurant in self.restaurants.items():
-            cost = restaurant.order_cost(orders)
-            restaurant_power = restaurant.get_power
-            if cost == -1:
-                least_order_cost = -1
-                break
-            if least_order_cost > cost and restaurant_power >= cost:
-                least_order_cost = cost
-                cheapest_restaurant = restaurant_name
+            orders = [order.lower() for order in orders]
+            least_order_cost = sys.maxsize
+            cheapest_restaurant = None
 
-        if least_order_cost == -1:
+            for restaurant_name, restaurant in self.restaurants.items():
+                cost = restaurant.order_cost(orders)
+                restaurant_power = restaurant.get_power
+                if cost == -1:
+                    least_order_cost = -1
+                    break
+                if least_order_cost > cost and restaurant_power >= cost:
+                    least_order_cost = cost
+                    cheapest_restaurant = restaurant_name
+
+            if least_order_cost == -1:
+                return -1, None
+            elif cheapest_restaurant is None:
+                print("Can't place order! Restaurants busy, please visit in sometime.")
+                return -1, None
+            else:
+                print("Order Cost: ${}\nCheapest Restaurant: Restaurant {}".format(least_order_cost, cheapest_restaurant))
+                return least_order_cost, cheapest_restaurant
+        except Exception as e:
             return -1, None
-        elif cheapest_restaurant is None:
-            print("Can't place order! Restaurants busy, please visit in sometime.")
-            return -1, None
-        else:
-            print("Order Cost: ${} \n Cheapest Restaurant: Restaurant {}".format(least_order_cost, cheapest_restaurant))
-            return least_order_cost, cheapest_restaurant
 
     def place_order(self, orders):
         """
@@ -77,12 +83,13 @@ class Cafeteria:
         :input: takes list of orders
         :returns: returns 1 if order can be placed successfully else 0
         """
+        print("*"*7+" Placing your order. Please wait! " + "*"*8)
         least_order_cost, cheapest_restaurant = self.check_best_price_for_order(orders)
         if least_order_cost != -1:
             self.restaurants[cheapest_restaurant].place_order(least_order_cost)
             self.restaurants[cheapest_restaurant].restore_power(least_order_cost)
-            print("Your order has been placed successfully!")
+            print("Your order has been placed successfully! \n")
             return 1
         else:
-            print("Error placing the order!")
+            print("Error placing the order! \n")
             return 0

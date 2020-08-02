@@ -18,7 +18,7 @@ items_price_restaurant_B = {
 
 items_price_restaurant_C = {
     "waffles": 12,
-    "donuts": 9,
+    "donuts": 8,
     "pastry": 10,
     "soup": 10,
     "biryani": 18,

@@ -41,10 +41,11 @@ by `test_main.py` file in the `cafeteria` directory
 * `cafe.py` holds the implementation of Cafeteria class.
 * `Cafeteria` holds [has_a](https://en.wikipedia.org/wiki/Has-a) relationship with `Restaurant` class. 
 Thus a `Composite` relationship logic has been used while designing them. 
-* `test_main.py` runs the unit tests written in the `tests` directory.
+* `test_main.py` runs all the unit tests written in the `tests` directory.
 
 ### Installing
 Once u have cloned/uncompressed project in your directory say cafeteria, change to the project directory
+via terminal and run the setup
 
 ```
 $ cd cafeteria
@@ -87,12 +88,17 @@ Setup done Successfully!
 
 ```
 
+**NOTE**- If you're running a `WINDOWS` machine, then just install `Python` and then open the `app.py` to run 
+you're own test cases(shown below).  
 ### Usage
 
 * The `app.py` file has been created to play around. It has most of the examples 
 and usage covered but let's get through some of the important methods.
 
-* once the `Cafeteria` object is created the menu can be checked as:
+* To run your own test cases, you can add more cases in `app.py` itself or can create another python file 
+in the same directory. 
+
+* As shown in `app.py` once the `Cafeteria` object is created the menu can be checked as:
 ```
 >> cafe1 = Cafeteria()
 >> cafe1.display_complete_menu()
@@ -141,9 +147,35 @@ Cheapest Restaurant: Restaurant B
 
 Output:
 
+******* Placing your order. Please wait! ********
 Order Cost: $23 
 Cheapest Restaurant: Restaurant B
 Your order has been placed successfully!
+```
+
+* You can also pass the order as `string`
+```
+>> cafe1.place_order("coke biryani")
+
+Output:
+
+******* Placing your order. Please wait! ********
+Order Cost: $23
+Cheapest Restaurant: Restaurant B
+Your order has been placed successfully! 
+
+```
+
+* You can also pass the order as `tuple`
+```
+>> cafe1.place_order("waffles", "donuts")
+
+Output:
+
+******* Placing your order. Please wait! ********
+Order Cost: $19
+Cheapest Restaurant: Restaurant A
+Your order has been placed successfully! 
 ```
 
 * Placing an order which is not in the menu
@@ -152,6 +184,7 @@ Your order has been placed successfully!
 
 Output:
 
+******* Placing your order. Please wait! ********
 sdfd is not present in our menu. 
 Kindly check the menu and try again.
 Error placing the order!
@@ -163,6 +196,7 @@ Error placing the order!
 
 Output:
 
+******* Placing your order. Please wait! ********
 No items found. Please place some items in your order.
 Error placing the order!
 ```
@@ -173,14 +207,27 @@ Error placing the order!
 
 Output:
 
+******* Placing your order. Please wait! ********
 Can't place order! Restaurants busy, please visit in sometime.
 Error placing the order!
 ```
 
+* Placing an order with ambiguous data types
+```
+>> cafe1.place_order(12)
+
+Output:
+
+******* Placing your order. Please wait! ********
+Error placing the order!
+```
+
+**NOTE**- These commands should be executed in a python file with `Cafeteria` object 
+initialized. As shown in `app.py` file.
 
 ### Extras
 
-* running the tests
+* running the tests. In your terminal type
 ```
 $ python test_main.py
 ```
