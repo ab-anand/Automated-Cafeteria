@@ -262,11 +262,11 @@ Assuming there are M restaurants in the cafeteria with each having N items.
 And the items in an order placed by the user is Z. 
 Big O Complexity for various operations are given.
 
-* *display_complete_menu()*: O(M*N) Time
+* `display_complete_menu()` : O(M*N) Time
 
-* *check_best_price_for_order()*: O(M*Z) (for each restaurant calculates the price using the dictionary)
+* `check_best_price_for_order()` : O(M*Z) (for each restaurant calculates the price using the dictionary)
 
-* *place_order()*: O(M*Z) 
+* `place_order()` : O(M*Z) 
 
 ### Author
 * **Abhinav Anand** - [ab-anand](https://github.com/ab-anand)
