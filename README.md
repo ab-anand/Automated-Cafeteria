@@ -267,4 +267,4 @@ Big O Complexity for various operations are given.
 * *place_order()*: O(M*Z) 
 
 ### Author
-* **Ayushi Rastogi** - [ayushi-24git](https://github.com/ayushi-24git)
+* **Abhinav Anand** - [ab-anand](https://github.com/ab-anand)
