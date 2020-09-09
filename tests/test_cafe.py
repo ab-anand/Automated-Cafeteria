@@ -1,9 +1,9 @@
 import unittest
 import sys
 
-sys.path.insert(0, '')
-
 from cafe import Cafeteria
+
+sys.path.insert(0, '')
 
 
 class TestCafe(unittest.TestCase):
@@ -16,7 +16,7 @@ class TestCafe(unittest.TestCase):
 
     def test_check_best_price_for_order(self):
         result_1 = self.cafe1.check_best_price_for_order(self.order_list_1)
-        correct_answer_1 = (33, "C")
+        correct_answer_1 = (32, "C")
         self.assertEqual(result_1, correct_answer_1)
 
         result_2 = self.cafe1.check_best_price_for_order(self.order_list_2)
