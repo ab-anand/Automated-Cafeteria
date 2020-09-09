@@ -26,6 +26,7 @@ cafeteria/
     │   └── setup.sh
     ├── cafe.py
     ├── data.py
+    ├── .travis.yml
     ├── README.md
     ├── restaurant.py
     ├── test_main.py
@@ -43,6 +44,7 @@ by `test_main.py` file in the `cafeteria` directory
 * `Cafeteria` holds [has_a](https://en.wikipedia.org/wiki/Has-a) relationship with `Restaurant` class. 
 Thus a `Composite` relationship logic has been used while designing them. 
 * `test_main.py` runs all the unit tests written in the `tests` directory.
+* `.travis.yml` [TRAVIS CI](https://travis-ci.org/) configuration file.
 
 ### Installing
 Once u have cloned/uncompressed project in your directory say cafeteria, change to the project directory
@@ -252,8 +254,7 @@ def __init__(self):
 ```
 
 * currently the power consumption(while placing an order) and restoring the power(once order is successfully completed)
-goes together(check `place_order` method in `cafe.py`) because there wasn't any requirement specified in the problem statement 
-but any logic to lapse the time in between can be added. For example one can
+goes together(check `place_order` method in `cafe.py`) but any logic to lapse the time in between can be added. For example one can
 add a timestamp with each order and after that timestamp only the power would be restored. 
 
 ### Code Time Complexity
