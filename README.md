@@ -1,5 +1,6 @@
 # Cafeteria App
 [![Build Status](https://travis-ci.com/ab-anand/Automated-Cafeteria.svg?branch=master)](https://travis-ci.com/ab-anand/Automated-Cafeteria)
+[![HitCount](http://hits.dwyl.com/ab-anand/Automated-Cafeteria.svg)](http://hits.dwyl.com/ab-anand/Automated-Cafeteria)
 
 An automated cafeteria system that allows any customer to place order from the 
 available restaurants without human intervention. Users can get the order from the
