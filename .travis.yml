@@ -5,4 +5,4 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
-script: python test_main.py -v
+script: python -m unittest discover tests
