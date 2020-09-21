@@ -1,6 +1,7 @@
 # Cafeteria App
 [![Build Status](https://travis-ci.com/ab-anand/Automated-Cafeteria.svg?branch=master)](https://travis-ci.com/ab-anand/Automated-Cafeteria)
 [![codecov](https://codecov.io/gh/ab-anand/Automated-Cafeteria/branch/master/graph/badge.svg)](https://codecov.io/gh/ab-anand/Automated-Cafeteria)
+[![DeepSource](https://deepsource.io/gh/ab-anand/Automated-Cafeteria.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/ab-anand/Automated-Cafeteria/?ref=repository-badge)
 
 An automated cafeteria system that allows any customer to place order from the 
 available restaurants without human intervention. Users can get the order from the
